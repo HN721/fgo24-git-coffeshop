@@ -15,7 +15,7 @@ const Cart = async (items) => {
       menu(menubar);
     }
     if (returning.toLocaleLowerCase() === "n") {
-      console.log(`TerimaKasih Sudah Memesan Di HoseaCafe`);
+      checkout();
     }
   }
 };
