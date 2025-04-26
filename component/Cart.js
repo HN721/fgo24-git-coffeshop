@@ -1,6 +1,7 @@
 import { input } from "@inquirer/prompts";
 import menu from "./OrderMenu.js";
 import { menubar } from "../index.js";
+import checkout from "./Checkout.js";
 
 const Cart = async (items) => {
   if (items.length === 0) {
@@ -15,7 +16,7 @@ const Cart = async (items) => {
       menu(menubar);
     }
     if (returning.toLocaleLowerCase() === "n") {
-      console.log(`TerimaKasih Sudah Memesan Di HoseaCafe`);
+      checkout();
     }
   }
 };
