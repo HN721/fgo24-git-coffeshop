@@ -4,7 +4,7 @@ import keranjang from "./Cartdata.js";
 export default async function checkout() {
   const nama = await input({ message: `Masukan Nama Anda` });
   const email = await input({ message: `Masukan Email Anda` });
-  console.log("Pesanan Anda:");
+  console.log("Pesanan Anda :");
   keranjang.forEach((item, index) =>
     console.log(`${index + 1}. ${item.nama} dengan harga: ${item.harga}`)
   );
@@ -15,7 +15,7 @@ export default async function checkout() {
     console.log(`Nama: ${nama}`);
     console.log(`Email: ${email}`);
     keranjang.forEach((item, index) =>
-      console.log(`Pesanan kamu: ${item.nama} Rp.${item.harga}`)
+      console.log(`Total : ${item.nama} Rp.${item.harga}`)
     );
   }
 }

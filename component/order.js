@@ -3,6 +3,7 @@ import Cart from "./Cart.js";
 import keranjang from "./Cartdata.js";
 import menu from "./OrderMenu.js";
 import { menubar } from "../index.js";
+import checkout from "./Checkout.js";
 
 export default async function addOrder(index, item) {
   const answer = await input({ message: `Apakah Kamu Yakin? (Y/N):` });
@@ -17,6 +18,8 @@ export default async function addOrder(index, item) {
     const urcart = await input({ message: "Lihat Keranjang? (Y/N)" });
     if (urcart.toLowerCase() === "y") {
       Cart(keranjang);
+    } else {
+      checkout();
     }
   } else {
     setTimeout(() => menu(menubar), 1000);
